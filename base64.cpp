@@ -40,7 +40,7 @@ public:
         vector<unsigned char> decoded_data = base64_decode(encoded_data_);
 
         // Save decoded data to a binary file
-        ofstream output_file("decode.bin", ios::binary);
+        ofstream output_file("decode_data.bin", ios::binary);
         output_file.write(reinterpret_cast<char*>(&decoded_data[0]), decoded_data.size());
         output_file.close();
         cout << "Data decoding completed." << endl;
